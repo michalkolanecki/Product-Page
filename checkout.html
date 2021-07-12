@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product-Page</title>
+    <title>Product Page</title>
+    <!-- <link rel="stylesheet" href="css/checkout.css"> -->
 </head>
 <body>
-    
+    <main class="main-container">
+        <header>
+            <div>
+                <img src="img/icon-arrow-up.svg" alt="#" />
+                <p>back</p>
+            </div>
+            <img src="img/logo.svg" alt="Company logo" />
+            <nav>
+                <div class="menu">
+                    menu-nav
+                </div>
+            </nav>
+            <div>
+                Side nav
+                <img src="img/logo.svg" alt="Company logo" />
+                <ul>
+                    <li>Homepage</li>
+                    <li>Categories</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+                <ul>
+                    <li>My account</li>
+                    <li>My cart</li>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <header>
+                <h1>Your cart</h1>
+                <ul>
+                    <li>Product</li>
+                    <li>Quantity</li>
+                    <li>Price</li>
+                </ul>  
+            </header>
+            <div>
+                <div>
+                    <img class="#" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                    <p>Face care kit</p>
+                    <p><span>-</span>1<span>+</span></p>
+                    <p>$ 32</p>
+                </div>
+                <div>
+                    <img class="#" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                    <p>Moisturizing cream</p>
+                    <p><span>-</span>1<span>+</span></p>
+                    <p>$ 12</p>
+                </div>
+                <div>
+                    <img class="#" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                    <p>Moisturizing hair shampoo</p>
+                    <p><span>-</span>2<span>+</span></p>
+                    <p>$ 32</p>
+                </div>
+            </div>
+            <footer>
+                <h2>Order summary</h2>
+                <p>$ 64</p>
+            </footer>
+        </section>
+        <section>
+            <p>Payment details</p>
+            <div>
+                <div>
+                    <input type="text" value="Type here"><!--Put right properly in input and label-->
+                    <label for="Card number">Card number</label>
+                    <img src="img/visa.svg" alt="Visa logo">
+                </div>
+                <div>
+                    <input type="text" value="Type here">
+                    <label for="Name on card">Name on card</label>
+                </div>
+                <div>
+                    <input type="text" value="Type here">
+                    <label for="Expiration date">Expiration date</label>
+                    <input type="text" value="Type here">
+                    <label for="CCV">CCV</label>
+                </div>
+                <button>Purchase</button>
+            </div>
+        </section>
+    </main>
+    <script src="checkout.js"></script>
 </body>
 </html>
