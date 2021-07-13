@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
 
-// Media queries breakpoint defined as variables eg. $desktop: 1000px;
+$primaryColor: #FFFFFF;
+$secondaryColor: #282526;
+$thirdColor: #4D6362;
+$fourthColor: #000000;
+$fiveColor: #97B7AF;
+
+$mobile-min: 320px;
+$small-tablet-min: 576px;
+$tablet-min: 768px;
+$laptop-min: 992px;
+$desktop-min: 1200px;
 
 * {
     box-sizing: border-box;
@@ -9,5 +19,52 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Glass Antiqua', cursive;
+    background-color: $primaryColor;
+}
+.main-wrapper {
+    margin: 0 142px;
+    max-width: 1600px;
+    max-height: 1000px;
+    background: $primaryColor;
+    opacity: 1;
+}
 
+.header {
+    height: 153px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__icon {
+        color: $fourthColor;
+        display: flex;
+        width: 68px;
+        height: 23px;
+        opacity: 1;
+        &__icon-btn {
+            width: 8px;
+            height: 14px;
+            transform: matrix(0, -1, 1, 0, 0, 0);
+        }
+        &__icon-text {
+            width: 39px;
+            height: 23px;
+            font-size: 19px;
+            letter-spacing: 0px;
+        }
+    }
+    &__logo {
+        width: 199px;
+        height: 96px;
+        margin: 0 auto;
+    }
+    &__menu {
+        width: 97px;
+        height: 86px;
+        &__menu-btn {
+
+        }
+    }
 }
