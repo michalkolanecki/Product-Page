@@ -8,86 +8,80 @@
     <!-- <link rel="stylesheet" href="css/checkout.css"> -->
 </head>
 <body>
-    <main class="main-container">
-        <header>
-            <div>
-                <img src="img/icon-arrow-up.svg" alt="#" />
-                <p>back</p>
+    <main class="main-wrapper">
+        <header class="header">
+            <div class="header__icon">
+                <img class="header__icon-btn" src="img/icon-arrow-up.svg" alt="#" />
+                <p class="header__icon-text">back</p>
             </div>
-            <img src="img/logo.svg" alt="Company logo" />
-            <nav>
-                <div class="menu">
+            <img class="header__logo" src="img/logo.svg" alt="Company logo" />
+            <nav class="header__menu">
+                <div class="header__menu-btn">
                     menu-nav
                 </div>
+                <div class="header__menu-sidebar">
+                    Side nav
+                    <img class="header__menu-logo" src="img/logo.svg" alt="Company logo" />
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">Homepage</li>
+                        <li class="header__menu-item">Categories</li>
+                        <li class="header__menu-item">Blog</li>
+                        <li class="header__menu-item">Contact</li>
+                        <li class="header__menu-item">My account</li>
+                        <li class="header__menu-item">My cart</li>
+                    </ul>
+                </div>
             </nav>
-            <div>
-                Side nav
-                <img src="img/logo.svg" alt="Company logo" />
-                <ul>
-                    <li>Homepage</li>
-                    <li>Categories</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
-                </ul>
-                <ul>
-                    <li>My account</li>
-                    <li>My cart</li>
-                </ul>
-            </div>
         </header>
-        <section>
-            <header>
-                <h1>Your cart</h1>
-                <ul>
-                    <li>Product</li>
-                    <li>Quantity</li>
-                    <li>Price</li>
-                </ul>  
-            </header>
-            <div>
-                <div>
-                    <img class="#" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                    <p>Face care kit</p>
-                    <p><span>-</span>1<span>+</span></p>
-                    <p>$ 32</p>
+        <section class="product-cart">
+            <h1 class="product-cart__title">Your cart</h1>
+            <ul class="product-cart__list">
+                <li class="product-cart__item">Product</li>
+                <li class="product-cart__item">Quantity</li>
+                <li class="product-cart__item">Price</li>
+            </ul>  
+            <div class="product-cart__wrapper">
+                <div class="product-cart__product-details">
+                    <img class="product-cart__image" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                    <p class="product-cart__info">Face care kit</p>
+                    <p class="product-cart__amout"><span>-</span>1<span>+</span></p>
+                    <p class="product-cart__price">$ 32</p>
                 </div>
-                <div>
-                    <img class="#" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                    <p>Moisturizing cream</p>
-                    <p><span>-</span>1<span>+</span></p>
-                    <p>$ 12</p>
+                <div class="product-cart__wrapper">
+                    <img class="product-cart__product-details" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                    <p class="product-cart__image">Moisturizing cream</p>
+                    <p class="product-cart__amout"><span>-</span>1<span>+</span></p>
+                    <p class="product-cart__price">$ 12</p>
                 </div>
-                <div>
-                    <img class="#" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                    <p>Moisturizing hair shampoo</p>
-                    <p><span>-</span>2<span>+</span></p>
-                    <p>$ 32</p>
+                <div class="product-cart__wrapper">
+                    <img class="product-cart__product-details" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                    <p class="product-cart__image">Moisturizing hair shampoo</p>
+                    <p class="product-cart__amout"><span>-</span>2<span>+</span></p>
+                    <p class="product-cart__price#">$ 32</p>
                 </div>
             </div>
-            <footer>
-                <h2>Order summary</h2>
-                <p>$ 64</p>
-            </footer>
+            <h2 class="product-cart__summary-text">Order summary</h2>
+            <p class="product-cart__summary-amount">$ 64</p>
         </section>
-        <section>
-            <p>Payment details</p>
-            <div>
-                <div>
+        <section class="payment-card">
+            <p class="payment-card__title">Payment details</p>
+            <div class="payment-card__details">
+                <div class="payment-card__number">
                     <input type="text" value="Type here"><!--Put right properly in input and label-->
                     <label for="Card number">Card number</label>
                     <img src="img/visa.svg" alt="Visa logo">
                 </div>
-                <div>
+                <div class="payment-card__name">
                     <input type="text" value="Type here">
                     <label for="Name on card">Name on card</label>
                 </div>
-                <div>
+                <div class="payment-card__date">
                     <input type="text" value="Type here">
                     <label for="Expiration date">Expiration date</label>
                     <input type="text" value="Type here">
                     <label for="CCV">CCV</label>
                 </div>
-                <button>Purchase</button>
+                <button class="payment-card__btn">Purchase</button>
             </div>
         </section>
     </main>
