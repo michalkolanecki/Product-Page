@@ -8,82 +8,87 @@
     <link rel="stylesheet" href="css/checkout.css">
 </head>
 <body>
-    <main class="main-wrapper">
-        <header class="header">
-            <div class="header__icon">
-                <img class="header__icon-btn" src="img/icon-arrow-up.svg" />
-                <p class="header__icon-text">back</p>
+    <main>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__icon">
+                    <img class="header__icon-btn" src="img/icon-arrow-up.svg" alt="#"/>
+                    <p class="header__icon-text">back</p>
+                </div>
+                <img class="header__logo" src="img/logo.svg" alt="Company logo" />
+                <nav class="header__menu header__menu--active-js">
+                    <div class="header__menu-box ">
+                        <span class="header__menu-btn"></span>
+                    </div>
+                    <!-- <div class="header__menu-sidebar">
+                        <img class="header__menu-logo" src="img/logo.svg" alt="Company logo" />
+                        <ul class="header__menu-list">
+                            <a href="#"><li class="header__menu-item">Homepage</li></a>
+                            <a href="#"><li class="header__menu-item">Categories</li></a>
+                            <a href="#"><li class="header__menu-item">Blog</li></a>
+                            <a href="#"><li class="header__menu-item">Contact</li></a>
+                            <a href="#"><li class="header__menu-item">My account</li></a>
+                            <a href="#"><li class="header__menu-item">My cart</li></a>
+                        </ul>
+                    </div> -->
+                </nav>
+            </header>
+            <h1 class="main-title">Your Cart</h1>
+            <div class="main-cart">
+                <section class="product-cart">
+                    <div class="product-cart__wrapper">
+                        <div class="product-cart__list">
+                            <p class="product-cart__item product-cart__item--first">Product</p>
+                            <p class="product-cart__item product-cart__item--second">Quantity</p>
+                            <p class="product-cart__item">Price</p>
+                        </div>
+                        <div class="product-cart__details">
+                            <img class="product-cart__image" src="img/1_View_bright_edition/1_View_bright_edition.png" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                            <p class="product-cart__info">Face care kit</p>
+                            <p class="product-cart__amout"><span>-</span>1<span>+</span></p>
+                            <p class="product-cart__price">$ 32</p>
+                        </div>
+                        <div class="product-cart__details">
+                            <img class="product-cart__image" src="img/3_View_bright_edition/3_View_bright_edition.png" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                            <p class="product-cart__info">Moisturizing cream</p>
+                            <p class="product-cart__amout"><span>-</span>1<span>+</span></p>
+                            <p class="product-cart__price">$ 12</p>
+                        </div>
+                        <div class="product-cart__details">
+                            <img class="product-cart__image" src="img/7_View_bright_edition/7_View_bright_edition.png" alt="#" /> <!--image has to be in style as background and change with media queries-->
+                            <p class="product-cart__info">Moisturizing hair shampoo</p>
+                            <p class="product-cart__amout"><span>-</span>2<span>+</span></p>
+                            <p class="product-cart__price">$ 32</p>
+                        </div>
+                    </div>
+                    <footer class="product-cart__summary">
+                        <h2 class="product-cart__order"><strong>Order summary</strong></h2>
+                        <p class="product-cart__total"><strong>$ 64</strong></p>
+                    </footer>
+                </section>
+                <section class="payment-card">
+                    <h2 class="payment-card__title">Payment details</h2>
+                    <div class="payment-card__details">
+                        <div class="payment-card__number">
+                            <input type="text" value="Type here"><!--Put right properly in input and label-->
+                            <label for="Card number">Card number</label>
+                            <img src="img/visa.svg" alt="Visa logo">
+                        </div>
+                        <div class="payment-card__name">
+                            <input type="text" value="Type here">
+                            <label for="Name on card">Name on card</label>
+                        </div>
+                        <div class="payment-card__date">
+                            <input type="text" value="Type here">
+                            <label for="Expiration date">Expiration date</label>
+                            <input type="text" value="Type here">
+                            <label for="CCV">CCV</label>
+                        </div>
+                        <button class="payment-card__btn">Purchase</button>
+                    </div>
+                </section>
             </div>
-            <img class="header__logo" src="img/logo.svg" alt="Company logo" />
-            <nav class="header__menu">
-                <div class="header__menu-btn">
-                    menu-nav
-                </div>
-                <!-- <div class="header__menu-sidebar">
-                    Side nav
-                    <img class="header__menu-logo" src="img/logo.svg" alt="Company logo" />
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item">Homepage</li>
-                        <li class="header__menu-item">Categories</li>
-                        <li class="header__menu-item">Blog</li>
-                        <li class="header__menu-item">Contact</li>
-                        <li class="header__menu-item">My account</li>
-                        <li class="header__menu-item">My cart</li>
-                    </ul>
-                </div> -->
-            </nav>
-        </header>
-        <section class="product-cart">
-            <h1 class="product-cart__title">Your cart</h1>
-            <ul class="product-cart__list">
-                <li class="product-cart__item">Product</li>
-                <li class="product-cart__item">Quantity</li>
-                <li class="product-cart__item">Price</li>
-            </ul>  
-            <div class="product-cart__wrapper">
-                <div class="product-cart__product-details">
-                    <img class="product-cart__image" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                    <p class="product-cart__info">Face care kit</p>
-                    <p class="product-cart__amout"><span>-</span>1<span>+</span></p>
-                    <p class="product-cart__price">$ 32</p>
-                </div>
-                <div class="product-cart__wrapper">
-                    <img class="product-cart__product-details" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                    <p class="product-cart__image">Moisturizing cream</p>
-                    <p class="product-cart__amout"><span>-</span>1<span>+</span></p>
-                    <p class="product-cart__price">$ 12</p>
-                </div>
-                <div class="product-cart__wrapper">
-                    <img class="product-cart__product-details" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                    <p class="product-cart__image">Moisturizing hair shampoo</p>
-                    <p class="product-cart__amout"><span>-</span>2<span>+</span></p>
-                    <p class="product-cart__price#">$ 32</p>
-                </div>
-            </div>
-            <h2 class="product-cart__summary-text">Order summary</h2>
-            <p class="product-cart__summary-amount">$ 64</p>
-        </section>
-        <section class="payment-card">
-            <p class="payment-card__title">Payment details</p>
-            <div class="payment-card__details">
-                <div class="payment-card__number">
-                    <input type="text" value="Type here"><!--Put right properly in input and label-->
-                    <label for="Card number">Card number</label>
-                    <img src="img/visa.svg" alt="Visa logo">
-                </div>
-                <div class="payment-card__name">
-                    <input type="text" value="Type here">
-                    <label for="Name on card">Name on card</label>
-                </div>
-                <div class="payment-card__date">
-                    <input type="text" value="Type here">
-                    <label for="Expiration date">Expiration date</label>
-                    <input type="text" value="Type here">
-                    <label for="CCV">CCV</label>
-                </div>
-                <button class="payment-card__btn">Purchase</button>
-            </div>
-        </section>
+        </div>
     </main>
     <script src="checkout.js"></script>
 </body>

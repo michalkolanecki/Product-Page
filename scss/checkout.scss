@@ -6,7 +6,7 @@ $thirdColor: #4D6362;
 $fourthColor: #000000;
 $fiveColor: #97B7AF;
 
-$mobile-min: 320px;
+$mobile-min: 375px;
 $small-tablet-min: 576px;
 $tablet-min: 768px;
 $laptop-min: 992px;
@@ -17,21 +17,21 @@ $desktop-min: 1200px;
     margin: 0;
     padding: 0;
 }
-
 body {
     margin: 0;
     padding: 0;
     font-family: 'Glass Antiqua', cursive;
     background-color: $primaryColor;
 }
-.main-wrapper {
-    margin: 0 142px;
+main {
+    margin: 0 auto;
     max-width: 1600px;
     max-height: 1000px;
-    background: $primaryColor;
-    opacity: 1;
 }
-
+.wrapper {
+    margin: 0 142px; 
+    background: $primaryColor;
+}
 .header {
     height: 153px;
     display: flex;
@@ -40,20 +40,19 @@ body {
     &__icon {
         color: $fourthColor;
         display: flex;
+        align-items: center;
         width: 68px;
         height: 23px;
-        opacity: 1;
-        &__icon-btn {
-            width: 8px;
-            height: 14px;
-            transform: matrix(0, -1, 1, 0, 0, 0);
-        }
-        &__icon-text {
-            width: 39px;
-            height: 23px;
-            font-size: 19px;
-            letter-spacing: 0px;
-        }
+    }
+    &__icon-btn {
+        width: 8px;
+        height: 14px;
+        // transform: matrix(0, -1, 1, 0, 0, 0);
+    }
+    &__icon-text {
+        font-size: 19px;
+        letter-spacing: 0px;
+        margin-left: 20px;;
     }
     &__logo {
         width: 199px;
@@ -63,8 +62,120 @@ body {
     &__menu {
         width: 97px;
         height: 86px;
-        &__menu-btn {
-
+    }
+    &__menu-box {
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        top: 40%;
+        width: 32px;
+        height: 18px;
+    }
+    &__menu-btn {
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #000;
+        transition: transform 220ms ease-in-out;
+        &:before, &:after {
+            display: block;
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: #000;
+            content: '';
         }
+    }
+}
+.main-title {
+    width: 154px;
+    height: 44px;
+    margin: 54px 0 70px;
+    text-align: left;
+    font-size: 42px;
+    letter-spacing: 0px;
+    color: $secondaryColor;
+}
+.main-cart {
+    // display: flex;
+}
+.product-cart {
+    max-width: 726px;
+    &__wrapper {
+        border-bottom: 1px solid $thirdColor;
+        margin-bottom: 35px;
+    }
+    &__list {
+        height: 47px;
+        border-bottom: 1px solid $thirdColor;
+        display: flex;
+        font-size: 25px;
+        color: $secondaryColor;
+        margin-bottom: 21px;
+    }
+    &__item {
+        &--first {
+            flex-grow: 1;
+        }
+        &--second {
+            padding-right: 100px;
+        }
+    }
+    &__details {
+        display: flex;
+        align-items: center;
+    }
+    &__image {
+        width: 115px;
+        height: 126px;
+        margin-bottom: 36px;
+    }
+    &__info {
+        width: 183px;
+        height: 26px;
+        text-align: left;
+        font-size: 25px;
+        letter-spacing: 0px;
+        color: $secondaryColor;
+        flex-grow: 2;
+        padding-left: 26px;
+    }
+    &__amout {
+        width: 55px;
+        height: 29px;
+        font-size: 26px;
+        color: $secondaryColor;
+        flex-grow: 1;
+    }
+    &__price {
+        width: 37px;
+        height: 26px;
+        font-size: 25px;
+        letter-spacing: 0px;
+        color: $secondaryColor;
+    }
+    &__summary {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    &__order {
+        width: 181px;
+        height: 30px;
+        text-align: left;
+        font-size: 25px;
+        letter-spacing: 0px;
+        color: $secondaryColor;
+        flex-grow: 1;
+    }
+    &__total {
+        width: 44px;
+        height: 30px;
+        font-size: 25px;
+        color: $secondaryColor;
+        text-align: end;
     }
 }
