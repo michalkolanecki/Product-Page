@@ -9,13 +9,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Glass Antiqua", cursive;
-  background-color: #FFFFFF;
 }
 
 main {
   margin: 0 auto;
   max-width: 1600px;
   max-height: 1000px;
+  background-color: #FFFFFF;
 }
 
 .wrapper {
@@ -92,13 +92,13 @@ main {
   height: 44px;
   margin: 54px 0 70px;
   text-align: left;
-  font-size: 42px;
+  font-size: 35px;
   letter-spacing: 0px;
   color: #282526;
 }
 
 .product-cart {
-  max-width: 726px;
+  width: 726px;
 }
 .product-cart__wrapper {
   border-bottom: 1px solid #4D6362;
@@ -108,7 +108,7 @@ main {
   height: 47px;
   border-bottom: 1px solid #4D6362;
   display: flex;
-  font-size: 25px;
+  font-size: 21px;
   color: #282526;
   margin-bottom: 21px;
 }
@@ -130,7 +130,7 @@ main {
 .product-cart__info {
   height: 26px;
   text-align: left;
-  font-size: 25px;
+  font-size: 21px;
   letter-spacing: 0px;
   color: #282526;
   flex-grow: 1;
@@ -139,10 +139,10 @@ main {
 .product-cart__amout {
   width: 57px;
   height: 29px;
-  font-size: 26px;
+  font-size: 22px;
   color: #282526;
   text-align: center;
-  margin-right: 120px;
+  margin-right: 105px;
 }
 .product-cart__minus {
   padding-right: 12px;
@@ -159,7 +159,7 @@ main {
 .product-cart__price {
   width: 37px;
   height: 26px;
-  font-size: 25px;
+  font-size: 21px;
   letter-spacing: 0px;
   color: #282526;
 }
@@ -167,31 +167,24 @@ main {
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+  font-size: 25px;
+  color: #282526;
 }
 .product-cart__order {
   width: 181px;
   height: 30px;
   text-align: left;
-  font-size: 25px;
   letter-spacing: 0px;
-  color: #282526;
   flex-grow: 1;
 }
 .product-cart__total {
   width: 44px;
   height: 30px;
-  font-size: 25px;
-  color: #282526;
   text-align: end;
 }
 
 .payment-card {
-  max-width: 447px;
-}
-.payment-card__details {
-  height: 568px;
-  border: 1px solid #4D6362;
-  position: relative;
+  width: 447px;
 }
 .payment-card__title {
   width: 149px;
@@ -201,18 +194,96 @@ main {
   color: #282526;
   margin-bottom: 21px;
 }
+.payment-card__details {
+  height: 568px;
+  border: 1px solid #4D6362;
+  position: relative;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+}
+.payment-card__number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 377px;
+  height: 73px;
+  position: relative;
+  margin-top: 58px;
+}
+.payment-card__logo {
+  width: 62px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+.payment-card__name {
+  width: 377px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 51px 0;
+}
+.payment-card__security {
+  width: 377px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 104px;
+}
+.payment-card__date {
+  width: 166px;
+  height: 73px;
+  display: flex;
+  flex-direction: column;
+}
+.payment-card__code {
+  width: 166px;
+  height: 73px;
+  display: flex;
+  flex-direction: column;
+}
 .payment-card__btn {
   width: 205px;
   height: 48px;
   background: #4D6362;
   border-radius: 22px;
+  border: none;
   color: #FFFFFF;
   font-size: 21px;
   letter-spacing: 0px;
-  padding: 12px 68px;
   position: absolute;
   bottom: 35px;
   right: 35px;
+  cursor: pointer;
+  font-family: "Glass Antiqua", cursive;
+}
+.payment-card__btn:hover {
+  background-color: #97B7AF;
+}
+.payment-card__input {
+  border: none;
+  height: 23px;
+  font-size: 19px;
+  font-family: "Glass Antiqua", cursive;
+  margin-bottom: 17px;
+}
+.payment-card__input--first {
+  width: 285px;
+}
+.payment-card__separator {
+  height: 1px;
+  width: 100%;
+  background-color: #4D6362;
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=checkout.css.map */

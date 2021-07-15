@@ -68,30 +68,40 @@
                         </div>
                     </div>
                     <footer class="product-cart__summary">
-                        <h2 class="product-cart__order"><strong>Order summary</strong></h2>
+                        <p class="product-cart__order"><strong>Order summary</strong></p>
                         <p class="product-cart__total"><strong>$ 64</strong></p>
                     </footer>
                 </section>
                 <section class="payment-card">
                     <h2 class="payment-card__title">Payment details</h2>
-                    <div class="payment-card__details">
-                        <div class="payment-card__number">
-                            <input type="text" value="Type here"><!--Put right properly in input and label-->
-                            <label for="Card number">Card number</label>
+                    <form class="payment-card__details">
+                        <p class="payment-card__number">
+                            <input class="payment-card__input payment-card__input--first" id="cardNumber" name="cardNumber" type="text" placeholder="....-....-....-...." required>
+                            <span class="payment-card__separator"></span>
+                            <label for="cardNumber">card number</label>
                             <img class="payment-card__logo" src="img/visa.svg" alt="Visa logo">
+                        </p>
+                        <p class="payment-card__name">
+                            <input class="payment-card__input" id="cardName" name="cardName" type="text" required>
+                            <span class="payment-card__separator"></span>
+                            <label for="cardName">Name on card</label>
+                        </p>
+                        <div class="payment-card__security">
+                            <p class="payment-card__date">
+                                <input class="payment-card__input id="expirationDate" name="expirationDate" type="text" placeholder="MM / YY" required>
+                                <span class="payment-card__separator"></span>
+                                <label for="expirationDate">Expiration date</label>
+                            </p>
+                            <p class="payment-card__code">
+                                <input class="payment-card__input" id="ccvPass" name="ccvPass" type="password" min="4" max="8" required>
+                                <span class="payment-card__separator"></span>
+                                <label for="ccvPass">CCV</label>
+                            </p>
                         </div>
-                        <div class="payment-card__name">
-                            <input type="text" value="Type here">
-                            <label for="Name on card">Name on card</label>
-                        </div>
-                        <div class="payment-card__date">
-                            <input type="text" value="Type here">
-                            <label for="Expiration date">Expiration date</label>
-                            <input type="text" value="Type here">
-                            <label for="CCV">CCV</label>
-                        </div>
-                        <div class="payment-card__btn">Purchase</div>
-                    </div>
+                        <p>
+                            <input class="payment-card__btn" type="submit" value="Purchase"/><!--stop refreshing-->
+                        </p>
+                    </form>
                 </section>
             </div>
         </div>

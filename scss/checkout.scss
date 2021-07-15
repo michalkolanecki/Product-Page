@@ -6,6 +6,12 @@ $thirdColor: #4D6362;
 $fourthColor: #000000;
 $fiveColor: #97B7AF;
 
+$primaryFont: 21px;
+$secondaryFont: 25px;
+$thirdFont: 22px;
+$inputFont: 19px;
+$labelFont: 15px;
+
 $mobile-min: 375px;
 $small-tablet-min: 576px;
 $tablet-min: 768px;
@@ -21,12 +27,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Glass Antiqua', cursive;
-    background-color: $primaryColor;
 }
 main {
     margin: 0 auto;
     max-width: 1600px;
     max-height: 1000px;
+    background-color: $primaryColor;
 }
 .wrapper {
     margin: 0 142px; 
@@ -101,7 +107,7 @@ main {
     height: 44px;
     margin: 54px 0 70px;
     text-align: left;
-    font-size: 42px;
+    font-size: 35px;
     letter-spacing: 0px;
     color: $secondaryColor;
 }
@@ -110,7 +116,7 @@ main {
     // justify-content: space-between;
 }
 .product-cart {
-    max-width: 726px;
+    width: 726px;
     &__wrapper {
         border-bottom: 1px solid $thirdColor;
         margin-bottom: 35px;
@@ -119,7 +125,7 @@ main {
         height: 47px;
         border-bottom: 1px solid $thirdColor;
         display: flex;
-        font-size: 25px;
+        font-size: $primaryFont;
         color: $secondaryColor;
         margin-bottom: 21px;
     }
@@ -143,7 +149,7 @@ main {
     &__info {
         height: 26px;
         text-align: left;
-        font-size: 25px;
+        font-size: $primaryFont;
         letter-spacing: 0px;
         color: $secondaryColor;
         flex-grow: 1;
@@ -152,10 +158,10 @@ main {
     &__amout {
         width: 57px;
         height: 29px;
-        font-size: 26px;
+        font-size: $thirdFont;
         color: $secondaryColor;
         text-align: center;
-        margin-right: 120px;
+        margin-right: 105px;
     }
     &__minus {
         padding-right: 12px;
@@ -172,7 +178,7 @@ main {
     &__price {
         width: 37px;
         height: 26px;
-        font-size: 25px;
+        font-size: $primaryFont;
         letter-spacing: 0px;
         color: $secondaryColor;
     }
@@ -180,31 +186,24 @@ main {
         display: flex;
         align-items: center;
         margin-bottom: 60px;
+        font-size: $secondaryFont;
+        color: $secondaryColor;
     }
     &__order {
         width: 181px;
         height: 30px;
         text-align: left;
-        font-size: 25px;
         letter-spacing: 0px;
-        color: $secondaryColor;
         flex-grow: 1;
     }
     &__total {
         width: 44px;
         height: 30px;
-        font-size: 25px;
-        color: $secondaryColor;
         text-align: end;
     }
 }
 .payment-card {
-    max-width: 447px;    
-    &__details {
-        height: 568px;
-        border: 1px solid $thirdColor;
-        position: relative;
-    }
+    width: 447px;
     &__title {
         width: 149px;
         height: 26px;
@@ -213,23 +212,94 @@ main {
         color: $secondaryColor;
         margin-bottom: 21px;
     }
+    &__details {
+        height: 568px;
+        border: 1px solid $thirdColor;
+        position: relative;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+    }
     &__number {
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 377px;
+        height: 73px;
+        position: relative;
+        margin-top: 58px;
     }
     &__logo {
-
+        width: 62px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 4px;
+    }
+    &__name {
+        width: 377px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 51px 0;
+    }
+    &__security{
+        width: 377px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        margin-bottom: 104px;
+    }
+    &__date {
+        width: 166px;
+        height: 73px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__code {
+        width: 166px;
+        height: 73px;
+        display: flex;
+        flex-direction: column;
     }
     &__btn {
         width: 205px;
         height: 48px;
         background: $thirdColor;
         border-radius: 22px;
+        border: none;
         color: $primaryColor;
         font-size: 21px;
         letter-spacing: 0px;
-        padding: 12px 68px;
         position: absolute;
         bottom: 35px;
         right: 35px;
+        cursor: pointer;
+        font-family: 'Glass Antiqua', cursive;
+        &:hover {
+            background-color: $fiveColor;
+        }
     }
+    &__input {
+        border: none;
+        height: 23px;
+        font-size: $inputFont;
+        font-family: 'Glass Antiqua', cursive;
+        margin-bottom: 17px;
+        &--first {
+            width: 285px;
+          }
+    }
+    &__separator {
+        height: 1px;
+        width: 100%;
+        background-color: $thirdColor;
+        margin-bottom: 14px;
+    }
+}
+label {
+    font-size: $labelFont;
 }
