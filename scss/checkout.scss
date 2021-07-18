@@ -11,6 +11,7 @@ $secondaryFont: 25px;
 $thirdFont: 22px;
 $inputFont: 19px;
 $labelFont: 15px;
+$sidebarFont: 35px;
 
 $mobile-min: 375px;
 $small-tablet-min: 576px;
@@ -32,7 +33,7 @@ main {
     margin: 0 auto;
     max-width: 1600px;
     max-height: 1000px;
-    background-color: $primaryColor;
+    position: relative;
 }
 .wrapper {
     margin: 0 142px; 
@@ -42,18 +43,23 @@ main {
     height: 153px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     &__icon {
         color: $fourthColor;
         display: flex;
         align-items: center;
         width: 68px;
         height: 23px;
+        &:hover {
+            background-image: url(../img/icon-arrow-up-fill.svg);
+            color: $fiveColor;
+            // transition: 0.3s ease-out;
+        }
     }
     &__icon-btn {
         width: 8px;
         height: 14px;
-        // transform: matrix(0, -1, 1, 0, 0, 0);
+        background-image: url(../img/icon-arrow-up.svg);
     }
     &__icon-text {
         font-size: 19px;
@@ -68,42 +74,117 @@ main {
     &__menu {
         width: 97px;
         height: 86px;
-    }
-    &__menu-box {
         display: flex;
+        justify-content: flex-end;
         align-items: center;
-        position: relative;
-        left: 50%;
-        top: 40%;
-        width: 32px;
-        height: 18px;
     }
-    &__menu-btn {
+    &__button {
+        width: 32px;
+        height: 20px;
+        background-image: url(../img/menu-nav.svg);
+        cursor: pointer;
+        z-index: 2;
+        &:hover {
+            background-image: url(../img/menu-nav-fill.svg);
+            transition: background-image 0.3s ease-out;
+        }
+    }
+    &__sidebar {
+        display: none;
+    }
+    &__sidebar-table {
+        width: 713px;
+        height: 879px;
+        border: 1px solid $thirdColor;
         position: absolute;
-        width: 16px;
-        height: 2px;
-        border-radius: 2px;
-        background-color: #000;
-        transition: transform 220ms ease-in-out;
-        &:before, &:after {
-            display: block;
-            position: absolute;
-            width: 32px;
-            height: 2px;
-            border-radius: 2px;
-            background-color: #000;
-            content: '';
+        top: 57px;
+        right: 90px;
+        background-color: $primaryColor;
+        z-index: 1;
+        padding: 0px 87px;
+        transition: 0.5s ease;
+    }
+    &__sidebar-bottom {
+        width: 538px;
+        height: 128px;
+        border-bottom: 1px solid $thirdColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__sidebar-logo {
+        width: 135px;
+        height: 65px;
+        background-image: url(../img/logo.svg);
+        background-size: cover;
+    }
+    &__sidebar-button {
+        width: 88px;
+        height: 88px;
+    }
+    &__sidebar-close-button {  
+        width: 35px;
+        height: 22px;
+    }
+    &__main-list {
+        letter-spacing: 0px;
+        color: $secondaryColor;
+        font-size: $sidebarFont;
+    }
+    &__first-list {
+        border-bottom: 1px solid $thirdColor;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 89px 0 55px;
+    }
+    &__first-item {
+        height: 44px;
+        cursor: pointer;
+        margin-bottom: 34px;
+        opacity: 0.6;
+        &:nth-child(1):hover {
+            opacity: 1.0;
+            transition: color 0.3s ease-out;
         }
-        &:before {
-            top: -8px;
+    }
+    &__second-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 89px 0 49px;
+    }
+    &__second-item {
+        height: 44px;
+        cursor: pointer;
+        margin-bottom: 34px;
+        opacity: 0.6;
+        &:nth-child(2) {
+            color: $fiveColor;
         }
-        &:after {
-            bottom: -8px;
+        &:nth-child(2):hover {
+            color: $thirdColor;
+            opacity: 1.0;
+            transition: color 0.3s ease-out;
         }
+    }
+    &__overlay {
+        position: fixed;
+        transition: 0.5s ease;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $primaryColor;
+        opacity: 0.8;
     }
 }
+.nav--open {
+    display: block;
+}
 .main-title {
-    width: 154px;
     height: 44px;
     margin: 54px 0 70px;
     text-align: left;
@@ -112,8 +193,9 @@ main {
     color: $secondaryColor;
 }
 .main-cart {
-    // display: flex;
-    // justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .product-cart {
     width: 726px;
@@ -221,15 +303,15 @@ main {
         flex-direction: column;
         align-items: center;
         font-size: 15px;
+        padding: 58px 35px 35px;
     }
     &__number {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 377px;
+        width: 100%;
         height: 73px;
         position: relative;
-        margin-top: 58px;
     }
     &__logo {
         width: 62px;
@@ -239,7 +321,7 @@ main {
         top: 4px;
     }
     &__name {
-        width: 377px;
+        width: 100%;
         height: 75px;
         display: flex;
         flex-direction: column;
@@ -249,7 +331,6 @@ main {
     &__security{
         width: 377px;
         display: flex;
-        justify-content: center;
         justify-content: space-between;
         margin-bottom: 104px;
     }
@@ -264,6 +345,7 @@ main {
         height: 73px;
         display: flex;
         flex-direction: column;
+        opacity: 0.6;
     }
     &__btn {
         width: 205px;
@@ -281,25 +363,42 @@ main {
         font-family: 'Glass Antiqua', cursive;
         &:hover {
             background-color: $fiveColor;
+            transition: background-color 0.3s ease-out;
         }
     }
     &__input {
         border: none;
-        height: 23px;
+        height: 40px;
         font-size: $inputFont;
         font-family: 'Glass Antiqua', cursive;
-        margin-bottom: 17px;
-        &--first {
-            width: 285px;
-          }
+        outline: none;
+        border-bottom: 1px solid $thirdColor;
+        padding-bottom: 17px;
+        color: $secondaryColor;
+        caret-color: $fiveColor;
     }
-    &__separator {
-        height: 1px;
-        width: 100%;
-        background-color: $thirdColor;
-        margin-bottom: 14px;
+    &__input--effect:hover::placeholder {
+        color: $fiveColor;
+        transition: 0.3s ease-out;
+    }
+    &__input--effect:hover {
+        color: $fiveColor;
+        border-bottom: 1px solid $fiveColor;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+    }
+    &__input:focus {
+        color: black;
+        border-bottom: 1px solid $fiveColor;
+        opacity: 1.0;
+    }
+    &__input:focus ~ label {
+        color: black;
+        opacity: 1.0;
     }
 }
 label {
     font-size: $labelFont;
+    padding-top: 14px;
+    opacity: 0.6;
 }

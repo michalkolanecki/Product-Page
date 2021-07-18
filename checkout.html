@@ -11,98 +11,104 @@
     <main>
         <div class="wrapper">
             <header class="header">
-                <div class="header__icon">
-                    <img class="header__icon-btn" src="img/icon-arrow-up.svg" alt="#"/>
-                    <p class="header__icon-text">back</p>
-                </div>
-                <img class="header__logo" src="img/logo.svg" alt="Company logo" />
-                <nav class="header__menu header__menu--active-js">
-                    <div class="header__menu-box ">
-                        <span class="header__menu-btn"></span>
+                    <div class="header__icon">
+                        <span class="header__icon-btn"></span>
+                        <p class="header__icon-text">back</p>
                     </div>
-                    <!-- <div class="header__menu-sidebar">
-                        <img class="header__menu-logo" src="img/logo.svg" alt="Company logo" />
-                        <ul class="header__menu-list">
-                            <a href="#"><li class="header__menu-item">Homepage</li></a>
-                            <a href="#"><li class="header__menu-item">Categories</li></a>
-                            <a href="#"><li class="header__menu-item">Blog</li></a>
-                            <a href="#"><li class="header__menu-item">Contact</li></a>
-                            <a href="#"><li class="header__menu-item">My account</li></a>
-                            <a href="#"><li class="header__menu-item">My cart</li></a>
-                        </ul>
-                    </div> -->
-                </nav>
+                    <img class="header__logo" src="img/logo.svg" alt="Company logo" />
+                    <nav class="header__menu">
+                        <div class="header__button header__button--active-js"></div>
+                        <div class="header__sidebar header__sidebar--inactive-js">
+                            <div class="header__overlay"></div>
+                            <div class="header__sidebar-table">
+                                <div class="header__sidebar-bottom">
+                                    <div class="header__sidebar-logo"></div>
+                                    <div class="header__sidebar-button">
+                                        <img class="header__sidebar-close-button" src="img/closeButton.svg" alt="Close button"/>
+                                    </div>
+                                </div>
+                                <div class="header__main-list">
+                                    <ul class="header__first-list">
+                                        <li class="header__first-item"><a href="#"></a>Homepage</a></li>
+                                        <li class="header__first-item"><a href="#"></a>Categories</a></li>
+                                        <li class="header__first-item"><a href="#"></a>Blog</a></li>
+                                        <li class="header__first-item"><a href="#"></a>Contact</a></li>
+                                    </ul>
+                                    <ul class="header__second-list">
+                                        <li class="header__second-item"><a href="#"></a>My account</a></li>
+                                        <li class="header__second-item"><a href="#"></a>My cart</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
             </header>
             <h1 class="main-title">Your Cart</h1>
             <div class="main-cart">
-                <section class="product-cart">
-                    <div class="product-cart__wrapper">
-                        <div class="product-cart__list">
-                            <p class="product-cart__item product-cart__item--first">Product</p>
-                            <p class="product-cart__item product-cart__item--second">Quantity</p>
-                            <p class="product-cart__item">Price</p>
+                    <section class="product-cart">
+                        <div class="product-cart__wrapper">
+                            <div class="product-cart__list">
+                                <p class="product-cart__item product-cart__item--first">Product</p>
+                                <p class="product-cart__item product-cart__item--second">Quantity</p>
+                                <p class="product-cart__item">Price</p>
+                            </div>
+                            <div class="product-cart__details">
+                                <img class="product-cart__image" src="img/1_View_bright_edition/1_View_bright_edition.png" alt="#" />
+                                <p class="product-cart__info">Face care kit</p>
+                                <p class="product-cart__amout">
+                                    <span class="product-cart__minus">-</span>1<span class="product-cart__plus">+</span>
+                                </p>
+                                <p class="product-cart__price">$ 32</p>
+                            </div>
+                            <div class="product-cart__details">
+                                <img class="product-cart__image" src="img/3_View_bright_edition/3_View_bright_edition.png" alt="#" />
+                                <p class="product-cart__info">Moisturizing cream</p>
+                                <p class="product-cart__amout">
+                                    <span class="product-cart__minus">-</span>1<span class="product-cart__plus">+</span>
+                                </p>
+                                <p class="product-cart__price">$ 12</p>
+                            </div>
+                            <div class="product-cart__details">
+                                <img class="product-cart__image" src="img/7_View_bright_edition/7_View_bright_edition.png" alt="#" />
+                                <p class="product-cart__info">Moisturizing hair shampoo</p>
+                                <p class="product-cart__amout">
+                                    <span class="product-cart__minus">-</span>2<span class="product-cart__plus">+</span>
+                                </p>
+                                <p class="product-cart__price">$ 17</p>
+                            </div>
                         </div>
-                        <div class="product-cart__details">
-                            <img class="product-cart__image" src="img/1_View_bright_edition/1_View_bright_edition.png" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                            <p class="product-cart__info">Face care kit</p>
-                            <p class="product-cart__amout">
-                                <span class="product-cart__minus">-</span>1<span class="product-cart__plus">+</span>
+                        <footer class="product-cart__summary">
+                            <p class="product-cart__order"><strong>Order summary</strong></p>
+                            <p class="product-cart__total"><strong>$ 61</strong></p>
+                        </footer>
+                    </section>
+                    <section class="payment-card">
+                        <h2 class="payment-card__title">Payment details</h2>
+                        <form class="payment-card__details">
+                            <p class="payment-card__number">
+                                <input class="payment-card__input" id="cardNumber" name="cardNumber" type="text" >
+                                <label for="cardNumber">card number</label>
+                                <img class="payment-card__logo" src="img/visa.svg" alt="Visa logo">
                             </p>
-                            <p class="product-cart__price">$ 32</p>
-                        </div>
-                        <div class="product-cart__details">
-                            <img class="product-cart__image" src="img/3_View_bright_edition/3_View_bright_edition.png" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                            <p class="product-cart__info">Moisturizing cream</p>
-                            <p class="product-cart__amout">
-                                <span class="product-cart__minus">-</span>1<span class="product-cart__plus">+</span>
+                            <p class="payment-card__name">
+                                <input class="payment-card__input" id="cardName" name="cardName" type="text" >
+                                <label for="cardName">Name on card</label>
                             </p>
-                            <p class="product-cart__price">$ 12</p>
-                        </div>
-                        <div class="product-cart__details">
-                            <img class="product-cart__image" src="img/7_View_bright_edition/7_View_bright_edition.png" alt="#" /> <!--image has to be in style as background and change with media queries-->
-                            <p class="product-cart__info">Moisturizing hair shampoo</p>
-                            <p class="product-cart__amout">
-                                <span class="product-cart__minus">-</span>2<span class="product-cart__plus">+</span>
+                            <div class="payment-card__security">
+                                <div class="payment-card__date">
+                                    <input class="payment-card__input payment-card__input--effect" id="expirationDate" name="expirationDate" type="text" placeholder="MM / YY" >
+                                    <label for="expirationDate">Expiration date</label>
+                                </div>
+                                <p class="payment-card__code">
+                                    <input class="payment-card__input" id="ccvPass" name="ccvPass" type="password" min="4" max="8" placeholder=". . ." >
+                                    <label for="ccvPass">CCV</label>
+                                </p>
+                            </div>
+                            <p>
+                                <input class="payment-card__btn" type="submit" value="Purchase"/>
                             </p>
-                            <p class="product-cart__price">$ 32</p>
-                        </div>
-                    </div>
-                    <footer class="product-cart__summary">
-                        <p class="product-cart__order"><strong>Order summary</strong></p>
-                        <p class="product-cart__total"><strong>$ 64</strong></p>
-                    </footer>
-                </section>
-                <section class="payment-card">
-                    <h2 class="payment-card__title">Payment details</h2>
-                    <form class="payment-card__details">
-                        <p class="payment-card__number">
-                            <input class="payment-card__input payment-card__input--first" id="cardNumber" name="cardNumber" type="text" placeholder="....-....-....-...." required>
-                            <span class="payment-card__separator"></span>
-                            <label for="cardNumber">card number</label>
-                            <img class="payment-card__logo" src="img/visa.svg" alt="Visa logo">
-                        </p>
-                        <p class="payment-card__name">
-                            <input class="payment-card__input" id="cardName" name="cardName" type="text" required>
-                            <span class="payment-card__separator"></span>
-                            <label for="cardName">Name on card</label>
-                        </p>
-                        <div class="payment-card__security">
-                            <p class="payment-card__date">
-                                <input class="payment-card__input id="expirationDate" name="expirationDate" type="text" placeholder="MM / YY" required>
-                                <span class="payment-card__separator"></span>
-                                <label for="expirationDate">Expiration date</label>
-                            </p>
-                            <p class="payment-card__code">
-                                <input class="payment-card__input" id="ccvPass" name="ccvPass" type="password" min="4" max="8" required>
-                                <span class="payment-card__separator"></span>
-                                <label for="ccvPass">CCV</label>
-                            </p>
-                        </div>
-                        <p>
-                            <input class="payment-card__btn" type="submit" value="Purchase"/><!--stop refreshing-->
-                        </p>
-                    </form>
-                </section>
+                        </form>
+                    </section>
             </div>
         </div>
     </main>
