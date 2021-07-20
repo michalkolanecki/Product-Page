@@ -10,7 +10,7 @@ Layout was creating with **HTML**, **CSS** and some **JavaScript**.
 I used to **SCSS** to add styles for this webpage.
 
 
-## Product Page is static without dynamic data and form submit.
+Product Page is static **without dynamic data** and **form submit**.
 
 
 Is fully responsive from **375px** to **1600px**.
