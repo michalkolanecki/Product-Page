@@ -26,7 +26,12 @@ Page has some effects like for example change color when hover menu, open/close 
 
 
 
-#### PRODUCT PAGE MOBILE VIEW         #### PRODUCT PAGE MOBILE MENU
+#### PRODUCT PAGE MOBILE VIEW 
 
-![cover](./img/readme-img/mobile-page.png)        ![cover](./img/readme-img/mobile-menu.png)
+![cover](./img/readme-img/mobile-page.png)  
+
+
+#### PRODUCT PAGE MOBILE MENU
+
+![cover](./img/readme-img/mobile-menu.png)
 
